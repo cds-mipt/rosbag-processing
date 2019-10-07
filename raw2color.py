@@ -19,8 +19,9 @@ print(converted_imgs[0])
 def getImage(im_path):
     if os.path.isfile(im_path):
         img = cv2.imread(im_path, cv2.IMREAD_UNCHANGED)
-        img = cv2.cvtColor(img, cv2.COLOR_BAYER_GB2RGB)
-        img = img[:, :, [1, 2, 0]]
+        img = cv2.cvtColor(img, cv2.COLOR_BAYER_BG2BGR)
+        #img = cv2.cvtColor(img, cv2.COLOR_BAYER_GB2RGB)
+        #img = img[:, :, [2, 1, 0]]
         return img
     else:
         return None
