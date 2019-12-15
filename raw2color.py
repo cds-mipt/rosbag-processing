@@ -15,8 +15,8 @@ def getImage(im_path):
         return None
 
 def main_raw2color(path):
-    if path is None:
-        path = 'E:/Datasets/NKBVS/Taganrog/2019-08-16-11-24-24_0_a/vis/left/image_raw/data'
+
+    #path = 'E:/Datasets/NKBVS/NAMI-Polygon/2019-01-31-15-42-51_kia_velo_gps_time/stereo/left/image_raw/data'
 
     path_expression = path + '/*.png'
     imgs = glob.glob(path_expression)
