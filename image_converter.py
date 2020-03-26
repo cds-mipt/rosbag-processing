@@ -186,7 +186,7 @@ def main_geodata(bagname, topics=[], encoding='passthrough', show_topic_names=Fa
 			if not os.path.exists(data_path):
 					os.makedirs(data_path)
 
-			fname = str(topic)+'.img_{:06}.txt'.format(indexes[topic])
+			fname = str(topic).lstrip('/')+'.img_{:06}.txt'.format(indexes[topic])
 			file_path = os.path.join(data_path, fname)
 			indexes[topic] += 1
 
